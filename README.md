@@ -61,10 +61,4 @@ Die Screen-Recorder App beinhaltet noch ein Simples HTML-File mit einem Video-El
 
 Der eigentliche Renderprozess findet in der render.js statt. Hier wird auf Electron und Node-Module zurückgegriffen, um die verschiedenen Features zu zeigen. Mit Electron wurde im Renderprozess z.B. auf das desktopCapturer Modul zugegriffen, welches die Bildschirmaufnahme ermöglicht. Es wurde auch im Frontend mit dem writeFile Modul auf node.js zurückgegriffen.
 
-## App Bundlen
-Das Bundlen der App ist dank Electron-Forge ziemlich einfach. 
-```
-npm run make
-```
-Dies erstellt uns einen out-Folder, welcher eine Executable unserer App beinhaltet.
 
