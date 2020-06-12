@@ -1,9 +1,9 @@
 
-# Electron
+# Meteor
 
-Dieses Techdemo gibt eine kurzen Einblick in die Funktionalitäten von Electron. 
+Diese Demo befasst sich damit wie wir mit Meteor unsere erste Simple und entwas fortgeschrittenere Web Applikation entwickeln können. 
 
-Electron ist ein Framework, mit welchem es möglich ist, cross-plattform Desktop Applikationen mithilfe von Javascript, HTML & CSS zu entwickeln. Electron basiert auf Chromium und Node.js. Im Gegensatz zu einem Browser kann daher auf Node.js zurückgegriffen werden. Es können auch andere Frameworks wie React, Vue oder Angular zusammen mit Electron verwendet werden.
+Meteor ist eine Open Cource Plattform zum Erstellen von Web-, App- und Desktopanwendungen welche mit einer Reihe von Technologien, wie Vue.js, React oder MongoDB, daherkommt. Meteor verwaltet automatisch den Datenfluss zwischen Cloud- und Clientanwendungen sowie den Status und das Rendering der Client-Benutzeroberfläche, unabhängig davon, welches UI-Framework man verwenden.
 
 ## Vorraussetzungen 
 * [npm](https://www.npmjs.com/)
