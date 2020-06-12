@@ -46,7 +46,7 @@ Durch diesen Befehl wird ein Projekt erstellt welches die folgenden Datein beinh
 cd simple-todos
 meteor
 ```
-Running on localhost:3000
+Danach wechseln wir in unseren eben erstellten Ordner und starten unser Projekt welches dann unter localhost:3000 zu erreichen ist.
 
 ## Fortgeschrittene App mit Electron
 In unserer App werden die Features von Electron mithilfe einer Screen-Recording App veranschaulicht. Das Projekt wird mit Electron-Forge erstellt.
