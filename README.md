@@ -11,12 +11,16 @@ Meteor ist eine Open Cource Plattform zum Erstellen von Web-, App- und Desktopan
 
 
 ## Installation
-```
-npm install electron --save-dev
-```
-Durch diesen Befehl wird Electron als Abhängigkeit in die App eingebunden.
 
-Als Editor wird [Visual Studio Code](https://code.visualstudio.com/) oder [Atom](https://atom.io/) empfohlen, welche übrigends beide mit dem Electron Framework erstellt worden sind. 
+Windows
+```
+choco install meteor
+```
+
+Mac OS oder Linux
+```
+curl https://install.meteor.com/ | sh
+```
 
 ## Erste App mit Electron
 1. Erstellen eines Projektordners,navigieren in den entsprechenden Projektordner und `npm init` im Terminal ausführen. Daraufhin wird ein package.json File erstellt. 
