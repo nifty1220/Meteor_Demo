@@ -22,68 +22,16 @@ Mac OS oder Linux
 curl https://install.meteor.com/ | sh
 ```
 
-## Erste App mit Electron
-1. Erstellen eines Projektordners,navigieren in den entsprechenden Projektordner und `npm init` im Terminal ausführen. Daraufhin wird ein package.json File erstellt. 
-Dies sollte dann wiefolgt aussehen:
+## Erstellung einer HelloWorld Applikation
 ```
-{
-  "name": "your-app",
-  "version": "0.1.0",
-  "main": "main.js",
-  "scripts": {
-    "start": "electron ."
-  }
-}
+meteor create helloworld
 ```
-2. Electron mit `npm install electron --save-dev` zur App hinzufügen
-3. Projektstruktur:
+
 ```
-your-app/
-├── package.json
-├── main.js
-└── index.html
+cd simple-todos
+meteor
 ```
-Im main.js wird folgender Code benötigt:
-```javascript
-const { app, BrowserWindow } = require('electron');
-
-function createWindow () {
-  // creates the browserwindow
-  let win = new BrowserWindow({
-    width: 1000,
-    height: 800,
-    webPreferences: {
-      nodeIntegration: true
-    }
-  })
-
-  // loads the index.html
-  win.loadFile('index.html');
-
-  // optional open devtools automatic at startup
-  //win.webContents.openDevTools();
-}
-
-// method is called when electron is ready to create the browserwindow
-app.whenReady().then(createWindow);
-
-// it is common for macOS that an app stays open in the background when closing it
-// mac apps are normally closed with Cmd+Q
-app.on('window-all-closed', () => {
-    if (process.platform !== 'darwin'){
-        app.quit();
-    }
-});
-
-//it is also common on macOS to open a window when clicking on the icon in the dock and no other windows are open
-app.on('activate', () => {
-    if (BrowserWindow.getAllWindows().length === 0){
-        createWindow();
-    }
-});
-```
-Im main.js File können alle Features, welche das Electron-Modul bereitstellt, aufgerufen werden.
-Die index.html kann nach Belieben bearbeitet werden.
+Running on localhost:3000
 
 ## Fortgeschrittene App mit Electron
 In unserer App werden die Features von Electron mithilfe einer Screen-Recording App veranschaulicht. Das Projekt wird mit Electron-Forge erstellt.
