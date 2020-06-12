@@ -45,6 +45,7 @@ Durch diesen Befehl wird ein Projekt erstellt welches die folgenden Datein beinh
 ```
 cd simple-todos
 meteor
+# Meteor running on: http://localhost:3000/
 ```
 Danach wechseln wir in unseren eben erstellten Ordner und starten unser Projekt welches dann unter localhost:3000 zu erreichen ist.
 
