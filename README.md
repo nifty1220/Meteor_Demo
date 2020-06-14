@@ -357,9 +357,9 @@ task.html
     </li>
   </template>
 ```
+Mit "class="{{#if checked}}checked{{/if}}" können wir dem Elemenet die Klasse "checked" zuweisen falls checked true ist, um so beispielsweise den Text mit CSS durchzustreichen.
 
 Wir haben also wieder ein template mit einer Checkbox und einem Delete Button. 
-
 
 Alles was jetzt noch zu tun ist, ist wieder auf die Events zu reagieren.
 
@@ -382,6 +382,7 @@ Template.task.events({
   },
 });
 ```
+Jedes Objekt einer Collection hat eine unique ID und mit "this._id" können wir den jeweiligen Task updated oder entfernen. Die Update Funktion verwendet 2 Argumente, zuerst die ID welches Elemenet bearbeitet werde soll und danach was die Veränderung sein soll. In unserem Fall nutzen wir $set um das checked Feld einzuschalten. 
 
 Ausserdem benötigen wir in unsere body.js auch noch die eben erstellte task.js da sie darin verwendet wird.
 
