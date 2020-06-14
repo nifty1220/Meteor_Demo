@@ -43,22 +43,30 @@ Durch diesen Befehl wird ein Projekt erstellt welches die folgenden Datein beinh
 * .gitignore            # a control file for git
 
 ```
-cd simple-todos
+cd helloworld
 meteor
 # Meteor running on: http://localhost:3000/
 ```
-Danach wechseln wir in unseren eben erstellten Ordner und starten unser Projekt welches dann unter localhost:3000 zu erreichen ist.
+Danach wechseln wir in unseren eben erstellten Ordner und starten unser Projekt welches dann unter localhost:3000 zu erreichen ist.  
 
-## Fortgeschrittene App mit Electron
-In unserer App werden die Features von Electron mithilfe einer Screen-Recording App veranschaulicht. Das Projekt wird mit Electron-Forge erstellt.
-Electron-Forge erstellt ein Boilerplate und hat auch die benötigten Funktionen zum Bundlen der App.
+Et voilà, wir haben unsere erste Hello World Applikation erstellt.
+
+## Erstellung einer Todo List App
+
+Als erstes erstellen wir wieder ein neues Projekt welches wir gleich starten, da Meteor unseren Code permanent aktualisiert ist es auch nicht notwendig die Applikation neu zu starten. 
+
 ```
-npx create-electron-app screen-recorder
+meteor create to-do
+cd simple-todos
+meteor
 ```
-Im main.js wird nur `nodeIntegration: true` hinzugefügt. Dies gibt uns die Möglichkeit mit node.js im Frontend zu arbeiten.
 
-Die Screen-Recorder App beinhaltet noch ein Simples HTML-File mit einem Video-Element und Buttons zum Starten, Stoppen und Auswählen der Videosource.
-
-Der eigentliche Renderprozess findet in der render.js statt. Hier wird auf Electron und Node-Module zurückgegriffen, um die verschiedenen Features zu zeigen. Mit Electron wurde im Renderprozess z.B. auf das desktopCapturer Modul zugegriffen, welches die Bildschirmaufnahme ermöglicht. Es wurde auch im Frontend mit dem writeFile Modul auf node.js zurückgegriffen.
+Jetzt bereiten wir unsere Projekt vor, damit wir alle notwendigen Datein für unsere Applikation zur Verfügungn haben. Wir erstellen einen neuen Ordner "imports" in unserem Projekt welcher den Ordner "ui" mit den Datein 
+"body.html"
+"body.js"
+"task.html"
+"task.js"
+und einen api Ordner mit der Datei
+"tasks.js"
 
 
