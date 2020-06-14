@@ -6,8 +6,8 @@ Diese Demo befasst sich damit wie wir mit Meteor unsere erste Simple und entwas 
 Meteor ist eine Open Cource Plattform zum Erstellen von Web-, App- und Desktopanwendungen welche mit einer Reihe von Technologien, wie Vue.js, React oder MongoDB, daherkommt. Meteor verwaltet automatisch den Datenfluss zwischen Cloud- und Clientanwendungen sowie den Status und das Rendering der Client-Benutzeroberfläche, unabhängig davon, welches UI-Framework man verwenden.
 
 ## Vorraussetzungen 
-* [npm](https://www.npmjs.com/)
-* [Node.js](https://nodejs.org/en/)
+* [chocolatey (Windows)](https://chocolatey.org/)
+
 
 
 ## Installation
