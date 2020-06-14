@@ -1,7 +1,7 @@
 
 # Meteor
 
-Diese Demo befasst sich damit wie wir mit Meteor unsere erste Simple und entwas fortgeschrittenere Web Applikation entwickeln können. 
+Diese Demo befasst sich damit wie wir mit Meteor unsere erste simple und etwas fortgeschrittenere Web Applikation bzw. App entwickeln können. 
 
 Meteor ist eine Open Cource Plattform zum Erstellen von Web-, App- und Desktopanwendungen welche mit einer Reihe von Technologien, wie Vue.js, React oder MongoDB, daherkommt. Meteor verwaltet automatisch den Datenfluss zwischen Cloud- und Clientanwendungen sowie den Status und das Rendering der Client-Benutzeroberfläche, unabhängig davon, welches UI-Framework man verwenden.
 
