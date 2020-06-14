@@ -62,11 +62,64 @@ meteor
 ```
 
 Jetzt bereiten wir unsere Projekt vor, damit wir alle notwendigen Datein für unsere Applikation zur Verfügungn haben. Wir erstellen einen neuen Ordner "imports" in unserem Projekt welcher den Ordner "ui" mit den Datein 
-"body.html"
-"body.js"
-"task.html"
+"body.html",
+"body.js",
+"task.html",
 "task.js"
 und einen api Ordner mit der Datei
 "tasks.js"
 
+So, nun können wir loslegen.
+
+Beginnen wir damit den nicht benötigten code aus unserer main.html Datei zu entfernen
+
+```
+<head>
+  <title>  Todo App </title>
+ </head>
+```
+
+Jetzt legen wir unsere erste Todo Liste an und fügen hierführ einige HTML Elemente in unsere body.html hinzu und greifen dann mittels Templates mit unsere body.js darauf zu. 
+
+import/ui/body.html
+```
+<head>
+<body>
+    <div class="container">
+      <header>
+        <h1>Todo List</h1>
+      </header>
+  
+      <ul>
+        {{#each tasks}}
+          {{> task}}
+        {{/each}}
+      </ul>
+    </div>
+  </body>
+  
+  <template name="task">
+    <li>{{text}}</li>
+  </template>
+```
+
+import/ui/body.js
+```
+import { Template } from 'meteor/templating';
+ 
+import './body.html';
+ 
+Template.body.helpers({
+  tasks: [
+    { text: 'This is task 1' },
+    { text: 'This is task 2' },
+    { text: 'This is task 3' },
+  ],
+});
+```
+
+In unserem JavaScript entry point file (client/main.js) können wir ebenfalls den vorhandenen Code entfernen und importieren unsere body.js 
+```
+import '../imports/ui/body.js';
+```
 
