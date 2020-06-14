@@ -400,6 +400,8 @@ Template.body.helpers({
 
 Damit wäre die Applikation fertig, für denn fall, dass man sie auf einem Smartphone Emulator laufen lassen möchte kann man das ganz einfach so machen: 
 
+# Running on mobile
+
 iOS (Benötigt Mac)
 
 ```
