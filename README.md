@@ -23,7 +23,7 @@ curl https://install.meteor.com/ | sh
 ```
 
 ## Erstellung einer HelloWorld Applikation
-Wir erstellen eine einfache "Hello World" Applikation mit welcher wir ein erstes Verständnis für die Projekt Struktur von Meteor gibt
+Wir erstellen eine einfache "Hello World" Applikation welche uns ein erstes Verständnis für die Projektstruktur von Meteor gibt.
 
 ```
 meteor create helloworld
@@ -42,18 +42,20 @@ Durch diesen Befehl wird ein Projekt erstellt welches die folgenden Datein beinh
 * .meteor/              # internal Meteor files
 * .gitignore            # a control file for git
 
+
+Danach wechseln wir in unseren eben erstellten Ordner und starten unser Projekt welches dann unter localhost:3000 zu erreichen ist.  
+
 ```
 cd helloworld
 meteor
 # Meteor running on: http://localhost:3000/
 ```
-Danach wechseln wir in unseren eben erstellten Ordner und starten unser Projekt welches dann unter localhost:3000 zu erreichen ist.  
 
 Et voilà, wir haben unsere erste Hello World Applikation erstellt.
 
 ## Erstellung einer Todo List App
 
-Als erstes erstellen wir wieder ein neues Projekt welches wir gleich starten, da Meteor unseren Code permanent aktualisiert ist es auch nicht notwendig die Applikation neu zu starten. 
+Als Erstes erstellen wir wieder ein neues Projekt welches wir gleich starten, da Meteor unseren Code permanent aktualisiert ist es auch nicht notwendig bei Änderungen die Applikation neu zu starten. 
 
 ```
 meteor create to-do
@@ -66,12 +68,12 @@ Jetzt bereiten wir unsere Projekt vor, damit wir alle notwendigen Datein für un
 "body.js",
 "task.html",
 "task.js"
-und einen api Ordner mit der Datei
+und einen Ordner "api" mit der Datei
 "tasks.js"
 
 So, nun können wir loslegen.
 
-Beginnen wir damit den nicht benötigten code aus unserer main.html Datei zu entfernen
+Beginnen wir damit den nicht benötigten Code aus unserer main.html Datei zu entfernen
 
 ```
 <head>
@@ -79,7 +81,7 @@ Beginnen wir damit den nicht benötigten code aus unserer main.html Datei zu ent
  </head>
 ```
 
-Jetzt legen wir unsere erste Todo Liste an und fügen hierführ einige HTML Elemente in unsere body.html hinzu und greifen dann mittels Templates mit unsere body.js darauf zu. 
+Jetzt legen wir unsere erste Todo Liste an und fügen hierfür einige HTML Elemente in unsere body.html hinzu und greifen dann mittels Templates mit unsere body.js darauf zu. 
 
 import/ui/body.html
 
@@ -121,10 +123,10 @@ Template.body.helpers({
 ```
 
 # Templates
-Der Inhalt von Template Tags wir in Meteor templates kompiliert, welche wir einfach mit {{> templateName }} in unser HTML einbauen können. Der Vorteil hierbei ist, dass wir so ganz einfach mit Template.body von unserer JavaScript Datei einfach auf diesen Bereich zugreifen können. 
+Der Inhalt von Template Tags wird in Meteor Templates kompiliert, welche wir einfach mit {{ > templateName }} in unser HTML einbauen können. Der Vorteil hierbei ist, dass wir so ganz einfach mit Template.body von unserer JavaScript Datei einfach auf diesen Bereich zugreifen können. 
 
 # Logik
-Mit Hilfe der doppelt geschweiften Klammern können wir Logik und Daten in unser HTML einbauen. Mit Hilfe eines Helpers können wir dann die Daten von unserem JavaScript aus an unser Template weitgergeben. Wir haben also einen Template.body helper welcher uns ein Array mit den Daten liefert. Mit {{ #each tasks }} iterieren wir über das Array und fügen für jeden Wert ein "task" template ein. Innerhalb des #each Blocks können wir dann den Text mit Hilfe des Templates mit {{ text }} anzeigen lassen. 
+Mit Hilfe der doppelt geschweiften Klammern können wir Logik und Daten in unser HTML einbauen. Mit "helpers" können wir dann die Daten von unserem JavaScript aus an unser Template übergeben. Wir haben also einen Template.body helper welcher uns ein Array mit den Daten liefert. Mit {{ #each tasks }} iterieren wir über das Array und fügen für jeden Wert ein "task" template ein. Innerhalb des #each Blocks können wir dann den Text mit Hilfe des Templates mit {{ text }} anzeigen lassen. 
 
 In unserem JavaScript entry point file (client/main.js) können wir ebenfalls den vorhandenen Code entfernen und importieren unsere body.js 
 
@@ -265,7 +267,7 @@ header .hide-completed {
 
 # Collections und MongoDB
 
-Jetzt möchte ich, dass wir unsere Daten auch persistent speichern können und hierfür verwendenen wir Collections mit MongoDB. Das Tolle ist, dass MongoDB in Meteor integriert ist und wir es ganz einfach importieren können. Alles was wir hier machen ist eine Collection zu ersetllen und zu exportieren. 
+Jetzt möchte ich, dass wir unsere Daten auch persistent speichern können und hierfür verwendenen wir Collections mit MongoDB. Das Tolle ist, dass MongoDB in Meteor integriert ist und wir es ganz einfach importieren können. Alles was wir hier machen ist eine Collection zu erstellen und zu exportieren. 
 
 imports/api/tasks.js
 ```
@@ -301,7 +303,7 @@ Wenn wir uns jetzt unsere Applikation ansehen, dann sehen wir das unsere Todo Li
 
 # Events
 
-Natürlich können wir auch auf Events reagieren. Dafür fügen wir zunächst ein Form Element in unsere body.html ein und werden dann in unserer body.js diese event handlen. 
+Natürlich können wir auch auf Events reagieren. Dafür fügen wir zunächst ein Form Element in unsere body.html ein und werden dann in unserer body.js dieses Submit Event handlen. 
 
 ```
     <div class="container">
@@ -315,7 +317,7 @@ Natürlich können wir auch auf Events reagieren. Dafür fügen wir zunächst ei
       </header>
 ```
 
-Mit Template.body.events können wir jetzt mit dem Event arbeiten und alles was wir machen ist bei dem Submit Event von "new-task" uns den Wert des input Elements zu holen, der Collection "Tasks" hinzuzufügen und zum schluss das input Feld zu resetten.
+Mit Template.body.events können wir jetzt mit dem Event arbeiten und alles was wir machen ist bei dem Submit Event von "new-task" uns den Wert des Input Elements zu holen, der Collection "Tasks" hinzuzufügen und zum schluss das Input Feld zu resetten.
 
 ```
     tasks() {
@@ -346,7 +348,7 @@ Template.body.events({
 
 # Checkbox und Delete
 
-Im letzten Schritt werden wir jetzt nich die Funktion hinzufügen, welche es uns ermöglicht Tasks auch zu löschen oder abzuhacken. Dazu lagern wir unser task Template aus der body.html in ein eigens File aus. 
+Im letzten Schritt werden wir jetzt noch die Funktion hinzufügen, welche es uns ermöglicht Tasks auch zu löschen oder abzuhacken. Dazu lagern wir unser task Template aus der body.html in ein eigenes File aus. 
 
 task.html
 ```
@@ -398,9 +400,11 @@ import './body.html';
 Template.body.helpers({
 ```
 
-Damit wäre die Applikation fertig, für denn fall, dass man sie auf einem Smartphone Emulator laufen lassen möchte kann man das ganz einfach so machen: 
+Damit wäre die Applikation fertig.
 
 # Running on mobile
+ 
+Für denn Fall das man seine Applikation auch am Smartphone laufen lassen will kann man das ganz einfach mit diesem Emulator machen.
 
 iOS (Benötigt Mac)
 
