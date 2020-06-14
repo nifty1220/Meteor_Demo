@@ -117,6 +117,11 @@ Template.body.helpers({
   ],
 });
 ```
+# Templates
+Der Inhalt von Template Tags wir in Meteor templates kompiliert, welche wir einfach mit {{> templateName }} in unser HTML einbauen können. Der Vorteil hierbei ist, dass wir so ganz einfach mit Template.body von unserer JavaScript Datei einfach auf diesen Bereich zugreifen können. 
+
+# Logik
+Mit Hilfe der doppelt geschweiften Klammern können wir Logik und Daten in unser HTML einbauen. Mit Hilfe eines Helpers können wir dann die Daten von unserem JavaScript aus an unser Template weitgergeben. Wir haben also einen Template.body helper welcher uns ein Array mit den Daten liefert. Mit {{ #each tasks }} iterieren wir über das Array und fügen für jeden Wert ein "task" template ein. Innerhalb des #each Blocks können wir dann den Text mit Hilfe des Templates mit {{ text }} anzeigen lassen. 
 
 In unserem JavaScript entry point file (client/main.js) können wir ebenfalls den vorhandenen Code entfernen und importieren unsere body.js 
 ```
