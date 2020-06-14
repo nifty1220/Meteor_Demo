@@ -86,7 +86,6 @@ Jetzt legen wir unsere erste Todo Liste an und fügen hierfür einige HTML Eleme
 import/ui/body.html
 
 ```
-<head>
 <body>
     <div class="container">
       <header>
